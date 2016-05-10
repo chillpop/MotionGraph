@@ -13,6 +13,7 @@
 		DE3ADEE21CAC669300DE5654 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DE3ADEE11CAC669300DE5654 /* Assets.xcassets */; };
 		DE3ADEE51CAC669300DE5654 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DE3ADEE31CAC669300DE5654 /* LaunchScreen.storyboard */; };
 		DE3ADEF01CAC669400DE5654 /* MotionGraphTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE3ADEEF1CAC669400DE5654 /* MotionGraphTests.swift */; };
+		DE3ADEFB1CAC72D700DE5654 /* GraphView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE3ADEFA1CAC72D700DE5654 /* GraphView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +37,7 @@
 		DE3ADEEB1CAC669400DE5654 /* MotionGraphTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MotionGraphTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DE3ADEEF1CAC669400DE5654 /* MotionGraphTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MotionGraphTests.swift; sourceTree = "<group>"; };
 		DE3ADEF11CAC669400DE5654 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DE3ADEFA1CAC72D700DE5654 /* GraphView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GraphView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +80,7 @@
 			isa = PBXGroup;
 			children = (
 				DE3ADEDA1CAC669300DE5654 /* AppDelegate.swift */,
+				DE3ADEFA1CAC72D700DE5654 /* GraphView.swift */,
 				DE3ADEDC1CAC669300DE5654 /* ViewController.swift */,
 				DE3ADEDE1CAC669300DE5654 /* Main.storyboard */,
 				DE3ADEE11CAC669300DE5654 /* Assets.xcassets */,
@@ -198,6 +201,7 @@
 			files = (
 				DE3ADEDD1CAC669300DE5654 /* ViewController.swift in Sources */,
 				DE3ADEDB1CAC669300DE5654 /* AppDelegate.swift in Sources */,
+				DE3ADEFB1CAC72D700DE5654 /* GraphView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

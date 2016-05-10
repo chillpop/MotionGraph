@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Motion_Graph" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -15,11 +16,54 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="U6l-dH-bOj" customClass="GraphView" customModule="Motion_Graph" customModuleProvider="target">
+                                <rect key="frame" x="20" y="49" width="560" height="252"/>
+                                <color key="backgroundColor" red="0.98039215690000003" green="0.94117647059999998" blue="0.7843137255" alpha="1" colorSpace="deviceRGB"/>
+                            </view>
+                            <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JTg-uJ-hGR" customClass="GraphView" customModule="Motion_Graph" customModuleProvider="target">
+                                <rect key="frame" x="20" y="348" width="560" height="252"/>
+                                <color key="backgroundColor" red="0.98039215690000003" green="0.94117647059999998" blue="0.7843137255" alpha="1" colorSpace="deviceRGB"/>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="1000" text="Gyroscope (Radians/sec)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="96i-Xg-efQ">
+                                <rect key="frame" x="20" y="314" width="192" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="1000" text="Accelerometer (Gs)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fe8-Ie-R8w">
+                                <rect key="frame" x="20" y="20" width="149" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="96i-Xg-efQ" firstAttribute="top" secondItem="U6l-dH-bOj" secondAttribute="bottom" constant="13" id="2WH-hp-hTf"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="U6l-dH-bOj" secondAttribute="trailing" id="3Dc-LW-Hwr"/>
+                            <constraint firstItem="U6l-dH-bOj" firstAttribute="height" secondItem="JTg-uJ-hGR" secondAttribute="height" id="DiK-hR-lbc"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="JTg-uJ-hGR" secondAttribute="bottom" id="G82-Wk-nPv"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="Fe8-Ie-R8w" secondAttribute="leading" id="H1c-F1-IAP"/>
+                            <constraint firstItem="JTg-uJ-hGR" firstAttribute="leading" secondItem="U6l-dH-bOj" secondAttribute="leading" id="HdL-8Y-YUL"/>
+                            <constraint firstItem="U6l-dH-bOj" firstAttribute="top" secondItem="Fe8-Ie-R8w" secondAttribute="bottom" constant="8" id="RDh-w8-lt8"/>
+                            <constraint firstItem="Fe8-Ie-R8w" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="UHf-Q2-O76"/>
+                            <constraint firstItem="U6l-dH-bOj" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="Whz-TQ-yzG"/>
+                            <constraint firstItem="JTg-uJ-hGR" firstAttribute="trailing" secondItem="U6l-dH-bOj" secondAttribute="trailing" id="YQE-Pq-nUm"/>
+                            <constraint firstItem="JTg-uJ-hGR" firstAttribute="top" secondItem="96i-Xg-efQ" secondAttribute="bottom" constant="13" id="d3E-53-bSr"/>
+                            <constraint firstItem="96i-Xg-efQ" firstAttribute="leading" secondItem="Fe8-Ie-R8w" secondAttribute="leading" id="oqc-Ru-vMb"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="bottomGraph" destination="JTg-uJ-hGR" id="WTu-N8-hhr"/>
+                        <outlet property="bottomLabel" destination="96i-Xg-efQ" id="9bt-N2-KNA"/>
+                        <outlet property="topGraph" destination="U6l-dH-bOj" id="FDE-qt-HWt"/>
+                        <outlet property="topLabel" destination="Fe8-Ie-R8w" id="GXQ-yZ-XPv"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="451" y="600"/>
         </scene>
     </scenes>
 </document>
